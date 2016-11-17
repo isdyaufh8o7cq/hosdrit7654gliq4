@@ -117,8 +117,8 @@ func (t *SimpleChaincode) read(stub shim.ChaincodeStubInterface, args []string) 
         return nil, errors.New(jsonResp)
     }
     
-    jsonResp := "{\"Name\":\"" + name + "\",\"Amount\":\"" + string(valAsbytes) + "\"}"
-    fmt.Printf("Query Response:%s\n", jsonResp)
+ //   jsonResp := "{\"Name\":\"" + name + "\",\"Amount\":\"" + string(valAsbytes) + "\"}"
+ //   fmt.Printf("Query Response:%s\n", jsonResp)
  
     return valAsbytes, nil
 }
