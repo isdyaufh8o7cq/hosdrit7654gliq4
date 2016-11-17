@@ -113,12 +113,12 @@ func (t *SimpleChaincode) read(stub shim.ChaincodeStubInterface, args []string) 
     }
     
     if valAsbytes == nil {
-		      jsonResp := "{\"Error\":\"Nil amount for " + name + "\"}"
-		      return nil, errors.New(jsonResp)
-	   }
+        jsonResp := "{\"Error\":\"Nil amount for " + name + "\"}"
+        return nil, errors.New(jsonResp)
+    }
     
     jsonResp := "{\"Name\":\"" + name + "\",\"Amount\":\"" + string(valAsbytes) + "\"}"
-	   fmt.Printf("Query Response:%s\n", jsonResp)
+    fmt.Printf("Query Response:%s\n", jsonResp)
  
     return valAsbytes, nil
 }
